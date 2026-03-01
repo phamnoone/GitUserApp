@@ -19,7 +19,7 @@ This app create for show list users from GitHub
 
 DONE : ~~task-1: Initialize project~~
 
-task-2: Integrate core libraries: Hilt, Retrofit, Coroutines, Coil...
+DONE : ~~task-2: Integrate core libraries: Hilt, Retrofit, Coroutines, Coil...~~
 
 task-3: Implement Base Application, Navigation
 
