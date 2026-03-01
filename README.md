@@ -17,7 +17,7 @@ This app create for show list users from GitHub
 
 **Main Tasks**
 
-task-1: Initialize project
+DONE : ~~task-1: Initialize project~~
 
 task-2: Integrate core libraries: Hilt, Retrofit, Coroutines, Coil...
 
@@ -85,8 +85,7 @@ GithubAPI documents　https://docs.github.com/en/rest
 │   ├── api  
 │   ├── di
 │   ├── mapper              
-│   ├── repository          
-│   └── source              
+│   ├── repository                  
 ├── domain
 │   ├── model              
 │   ├── repository        

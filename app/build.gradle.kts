@@ -5,21 +5,35 @@ plugins {
 }
 
 android {
-    namespace = "com.example.gituserapp"
-    compileSdk = 35
+    namespace = "com.gituserapp"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.gituserapp"
+        applicationId = "com.gituserapp"
         minSdk = 26
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "GITHUB_ENDPOINT", "\"https://api.github.com/\"")
+
+            isDebuggable = true
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+
         release {
+            buildConfigField("String", "GITHUB_ENDPOINT", "\"https://api.github.com/\"")
+
+            isDebuggable = false
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -27,6 +41,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -36,6 +51,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
