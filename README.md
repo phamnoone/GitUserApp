@@ -23,7 +23,7 @@ DONE : ~~task-2: Integrate core libraries: Hilt, Retrofit, Coroutines, Coil...~~
 
 task-3: Implement Base Application, Navigation
 
-task-4: Build Domain Layer
+DONE : ~~task-4: Build Domain Layer~~
 
 task-5: Implement Data Layer (API Services, DTOs, Mappers, and Repository impl).
 
