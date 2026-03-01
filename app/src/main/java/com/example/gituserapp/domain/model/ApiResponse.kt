@@ -7,4 +7,13 @@ sealed class ApiResponse<T : Any> {
         class NetworkError<T : Any>(val exception: Throwable) : Error<T>()
         class UnknownError<T : Any>(val exception: Throwable) : Error<T>()
     }
+
+    fun <R : Any> map(transform: (T) -> R): ApiResponse<R> {
+        return when (this) {
+            is Success -> Success(transform(data))
+            is Error.HttpError -> Error.HttpError(code, errorBody)
+            is Error.NetworkError -> Error.NetworkError(exception)
+            is Error.UnknownError -> Error.UnknownError(exception)
+        }
+    }
 }
