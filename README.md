@@ -44,7 +44,33 @@ GithubAPI documents　https://docs.github.com/en/rest
 - Image Loading	Coil
 
 ### Project Structure: 
-TODO 
+<details>
+<summary>Click to expand project structure</summary>
+
+```text
+├── data
+│   ├── api  
+│   ├── di
+│   ├── mapper              
+│   ├── repository          
+│   └── source              
+├── domain
+│   ├── model              
+│   ├── repository        
+│   └── usecase            
+└── presentation
+    ├── base         
+    ├── navigation
+    ├── screen
+    └── theme
+
+``` 
+</details>
+
 
 ### Data Flow : 
-TODO
+<details>
+<summary>Click to expand data follow</summary>
+<img width="8100" height="6035" alt="image" src="https://github.com/user-attachments/assets/6d1aac11-645d-433a-8a01-74c9c32da597" />
+</details>
+
