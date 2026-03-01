@@ -34,3 +34,17 @@ Github UIを参考
 
 ### API 
 GithubAPI documents　https://docs.github.com/en/rest
+
+## 設計および技術選定
+- Pattern: MVI + Clean Architecture
+- Dependency Injection: Hilt
+- Kotlin
+- Jetpack Compose
+- Networking: Retrofit + OkHttp
+- Image Loading	Coil
+
+### Project Structure: 
+TODO 
+
+### Data Flow : 
+TODO
