@@ -13,6 +13,39 @@ This app create for show list users from GitHub
 7. Readme作成とDemo
 
 
+### タスク作成
+
+**Main Tasks**
+
+task-1: Initialize project
+
+task-2: Integrate core libraries: Hilt, Retrofit, Coroutines, Coil...
+
+task-3: Implement Base Application, Navigation
+
+task-4: Build Domain Layer
+
+task-5: Implement Data Layer (API Services, DTOs, Mappers, and Repository impl).
+
+task-6: User List Screen 
+
+task-7: User Detail Screenfeature 
+
+task-8: Write Unit Tests 
+
+task-9: Write E2E Tests 
+
+task-10: Finalize documentation and Demo video.
+
+**Kaizen Tasks (Bonus Excellence)**
+
+kaizen-1: Implement Offline-first using Room Database
+
+kaizen-2: Support Dark Mode
+
+kaizen-3: CI/CD Pipeline using GitHub Actions + Fastlane
+
+
 ## 要件分析
 GitHub API からデータを取得し、そのデータをアプリに表示する。
 ### 画面一覧と機能
