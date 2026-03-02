@@ -32,7 +32,7 @@ DONE : ~~task-5: Implement Data Layer (API Services, DTOs, Mappers, and Reposito
 
 DONE : ~~task-6: User List Screen~~
 
-task-7: User Detail Screenfeature 
+DONE : ~~task-7: User Detail Screen feature~~
 
 task-8: Write Unit Tests 
 
