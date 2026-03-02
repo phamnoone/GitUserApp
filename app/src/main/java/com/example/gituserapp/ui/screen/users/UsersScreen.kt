@@ -31,6 +31,7 @@ import com.gituserapp.R
 
 @Composable
 fun UsersScreen(
+    onUserClick: (String) -> Unit,
     viewModel: UsersViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
@@ -85,7 +86,10 @@ fun UsersScreen(
                                 }
                                 UserItem(
                                     avatarUrl = user.avatarUrl ?: "",
-                                    name = user.name ?: stringResource(R.string.unknown)
+                                    name = user.name ?: stringResource(R.string.unknown),
+                                    onClick = {
+                                        onUserClick(user.name ?: "")
+                                    }
                                 )
                             }
 
