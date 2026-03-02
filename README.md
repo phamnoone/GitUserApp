@@ -34,7 +34,7 @@ DONE : ~~task-6: User List Screen~~
 
 DONE : ~~task-7: User Detail Screen feature~~
 
-task-8: Write Unit Tests 
+DONE :~~task-8: Write Unit Tests~~
 
 task-9: Write E2E Tests 
 
