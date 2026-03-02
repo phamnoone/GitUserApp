@@ -100,7 +100,7 @@ fun UserDetailScreen(
                         if (state.repos.isEmpty() && !state.isLoadMore) {
                             item {
                                 Text(
-                                    text = stringResource(id = R.string.no_matching_repositories),
+                                    text = stringResource(id = R.string.no_matching_users),
                                     modifier = Modifier
                                         .fillMaxWidth()
                                         .padding(32.dp),
