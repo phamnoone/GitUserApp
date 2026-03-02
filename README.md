@@ -21,13 +21,13 @@ DONE : ~~task-1: Initialize project~~
 
 DONE : ~~task-2: Integrate core libraries: Hilt, Retrofit, Coroutines, Coil...~~
 
-task-3: Implement Base Application, Navigation
+DONE : ~~task-3: Implement Base Application, Navigation~~
 
 DONE : ~~task-4: Build Domain Layer~~
 
 DONE : ~~task-5: Implement Data Layer (API Services, DTOs, Mappers, and Repository impl).~~
 
-task-6: User List Screen 
+DONE : ~~task-6: User List Screen~~
 
 task-7: User Detail Screenfeature 
 

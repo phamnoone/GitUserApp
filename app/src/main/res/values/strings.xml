@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">GitUserApp</string>
+
+    <string name="search_hint">ユーザーを検索…</string>
+
+    <string name="error_http">HTTPエラー %1$d: %2$s</string>
+    <string name="error_network">ネットワークエラーが発生しました。接続を確認してください。</string>
+    <string name="error_unknown">不明なエラーが発生しました: %1$s</string>
+
+    <!-- Home Screen -->
+    <string name="search_repositories_hint">リポジトリを検索...</string>
+    <string name="no_matching_repositories">一致するリポジトリがありません</string>
+    <string name="enter_keyword_to_search">検索キーワードを入力してください</string>
+    <string name="error_unknown_exception">不明なエラー</string>
+    <string name="unknown">不明</string>
+
+    <!-- Detail Screen -->
+    <string name="error_missing_repo_info">リポジトリ情報が不足しています</string>
+    <string name="repository_details">リポジトリ詳細</string>
+    <string name="avatar">アバター</string>
+    <string name="no_description">説明はありません。</string>
+    
+    <!-- Detail Properties -->
+    <string name="id_label">ID</string>
+    <string name="stars_label">スター数</string>
+    <string name="forks_label">フォーク数</string>
+    <string name="watchers_label">ウォッチャー数</string>
+    <string name="open_issues_label">オープンイシュー数</string>
+    <string name="not_available">N/A</string>
 </resources>
