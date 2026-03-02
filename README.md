@@ -36,17 +36,18 @@ DONE : ~~task-7: User Detail Screen feature~~
 
 DONE :~~task-8: Write Unit Tests~~
 
-task-9: Write E2E Tests 
+task-9: Write E2E Tests(Need fix error)
 
 task-10: Finalize documentation and Demo video.
 
-**Kaizen Tasks (Bonus Excellence)**
+**Kaizen Tasks (Bonus Excellence)** If has more time
 
 kaizen-1: Implement Offline-first using Room Database
 
 kaizen-2: Support Dark Mode
 
 kaizen-3: CI/CD Pipeline using GitHub Actions + Fastlane
+
 
 
 ## 要件分析

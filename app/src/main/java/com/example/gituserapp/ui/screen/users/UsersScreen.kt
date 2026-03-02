@@ -68,7 +68,7 @@ fun UsersScreen(
                 onSuccess = { state ->
                     if (state.users.isEmpty()) {
                         Text(
-                            text = stringResource(R.string.no_matching_repositories),
+                            text = stringResource(R.string.no_matching_users),
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(32.dp),
