@@ -18,11 +18,16 @@ class FakeGitRepository @Inject constructor() : GitRepository {
                 if (page == 1) {
                     ApiResponse.Success(
                         listOf(
-                            GitUser(1, "google", "https://avatars.githubusercontent.com/u/1342004?v=4"),
-                            GitUser(2, "google-research", "https://avatars.githubusercontent.com/u/163806?v=4")
+                            GitUser(1, "google", "https://avatars.githubusercontent.com/u/1342004?v=4")
                         )
                     )
                 } else if (page == 2) {
+                    ApiResponse.Success(
+                        listOf(
+                            GitUser(2, "google-research", "https://avatars.githubusercontent.com/u/163806?v=4")
+                        )
+                    )
+                } else if (page == 3) {
                     ApiResponse.Success(
                         listOf(
                             GitUser(3, "google-api", "https://avatars.githubusercontent.com/u/152345?v=4")

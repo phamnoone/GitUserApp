@@ -13,6 +13,9 @@ import androidx.test.espresso.intent.Intents
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasAction
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasData
 import com.example.gituserapp.MainActivity
+import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.test.swipeUp
+import androidx.compose.ui.test.onRoot
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import org.hamcrest.Matchers.allOf
@@ -47,29 +50,46 @@ class DetailE2ETest {
         
         composeTestRule.waitUntil(timeoutMillis = 5000) {
             try {
-                composeTestRule.onNodeWithText("google", substring = true, ignoreCase = true).assertExists()
+                composeTestRule.onNodeWithText("google", substring = true, ignoreCase = true, useUnmergedTree = true).assertExists()
                 true
             } catch (e: Exception) {
                 false
             }
         }
 
-        composeTestRule.onNodeWithText("google", substring = true, ignoreCase = true).performClick()
+        composeTestRule.onNodeWithText("google", substring = true, ignoreCase = true, useUnmergedTree = true).performClick()
 
         composeTestRule.waitUntil(timeoutMillis = 5000) {
             try {
-                composeTestRule.onNodeWithText("Google", substring = true, ignoreCase = true).assertExists()
+                composeTestRule.onNodeWithText("Google", substring = true, ignoreCase = true, useUnmergedTree = true).assertExists()
                 true
             } catch (e: Exception) {
                 false
             }
         }
-        composeTestRule.onNodeWithText("Google", substring = true, ignoreCase = true).assertIsDisplayed()
+        composeTestRule.onNodeWithText("Google", substring = true, ignoreCase = true, useUnmergedTree = true).assertIsDisplayed()
         
-        composeTestRule.onNodeWithText("リポジト", substring = true, ignoreCase = true).assertIsDisplayed()
-        composeTestRule.onNodeWithText("guava", substring = true, ignoreCase = true).assertIsDisplayed()
+        composeTestRule.waitUntil(timeoutMillis = 5000) {
+            try {
+                composeTestRule.onNodeWithText("リポジトリを検索", substring = true, ignoreCase = true, useUnmergedTree = true).assertExists()
+                true
+            } catch (e: Exception) {
+                false
+            }
+        }
+        composeTestRule.onNodeWithText("リポジトリを検索", substring = true, ignoreCase = true, useUnmergedTree = true).assertIsDisplayed()
+        
+        composeTestRule.waitUntil(timeoutMillis = 5000) {
+            try {
+                composeTestRule.onNodeWithText("guava", substring = true, ignoreCase = true, useUnmergedTree = true).assertExists()
+                true
+            } catch (e: Exception) {
+                false
+            }
+        }
+        composeTestRule.onNodeWithText("guava", substring = true, ignoreCase = true, useUnmergedTree = true).assertIsDisplayed()
 
-        composeTestRule.onNodeWithText("guava", substring = true, ignoreCase = true).performClick()
+        composeTestRule.onNodeWithText("guava", substring = true, ignoreCase = true, useUnmergedTree = true).performClick()
         Intents.intended(
             allOf(
                 hasAction(Intent.ACTION_VIEW),
@@ -77,16 +97,16 @@ class DetailE2ETest {
             )
         )
 
-        composeTestRule.onNode(hasScrollToIndexAction()).performScrollToIndex(1)
+        composeTestRule.onRoot().performTouchInput { swipeUp() }
         
         composeTestRule.waitUntil(timeoutMillis = 5000) {
             try {
-                composeTestRule.onNodeWithText("protobuf", substring = true, ignoreCase = true).assertExists()
+                composeTestRule.onNodeWithText("protobuf", substring = true, ignoreCase = true, useUnmergedTree = true).assertExists()
                 true
             } catch (e: Exception) {
                 false
             }
         }
-        composeTestRule.onNodeWithText("protobuf", substring = true, ignoreCase = true).assertIsDisplayed()
+        composeTestRule.onNodeWithText("protobuf", substring = true, ignoreCase = true, useUnmergedTree = true).assertIsDisplayed()
     }
 }

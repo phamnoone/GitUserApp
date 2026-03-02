@@ -20,25 +20,16 @@ This app create for show list users from GitHub
 
 **Main Tasks**
 
-DONE : ~~task-1: Initialize project~~
-
-DONE : ~~task-2: Integrate core libraries: Hilt, Retrofit, Coroutines, Coil...~~
-
-DONE : ~~task-3: Implement Base Application, Navigation~~
-
-DONE : ~~task-4: Build Domain Layer~~
-
-DONE : ~~task-5: Implement Data Layer (API Services, DTOs, Mappers, and Repository impl).~~
-
-DONE : ~~task-6: User List Screen~~
-
-DONE : ~~task-7: User Detail Screen feature~~
-
-DONE :~~task-8: Write Unit Tests~~
-
-task-9: Write E2E Tests(Need fix error)
-
-task-10: Finalize documentation and Demo video.
+- [x] task-1: Initialize project
+- [x] task-2: Integrate core libraries: Hilt, Retrofit, Coroutines, Coil...
+- [x] task-3: Implement Base Application, Navigation
+- [x] task-4: Build Domain Layer
+- [x] task-5: Implement Data Layer (API Services, DTOs, Mappers, and Repository impl).
+- [x] task-6: User List Screen
+- [x] task-7: User Detail Screen feature
+- [x] task-8: Write Unit Tests
+- [x] task-9: Write E2E Tests
+- [x] task-10: Finalize documentation and Demo video.
 
 **Kaizen Tasks (Bonus Excellence)** If has more time
 

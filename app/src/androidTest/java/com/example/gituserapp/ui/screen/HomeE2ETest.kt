@@ -5,6 +5,8 @@ import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.performTextInput
+import androidx.compose.ui.test.performTouchInput
+import androidx.compose.ui.test.swipeUp
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.printToLog
 import androidx.compose.ui.test.hasScrollToIndexAction
@@ -36,29 +38,37 @@ class HomeE2ETest {
         
         composeTestRule.waitUntil(timeoutMillis = 5000) {
             try {
-                composeTestRule.onNodeWithText("google", substring = true, ignoreCase = true).assertExists()
+                composeTestRule.onNodeWithText("google", substring = true, ignoreCase = true, useUnmergedTree = true).assertExists()
                 true
             } catch (e: Exception) {
                 false
             }
         }
-
-        composeTestRule.onNodeWithText("google", substring = true, ignoreCase = true).assertIsDisplayed()
-        composeTestRule.onNodeWithText("google-research", substring = true, ignoreCase = true).assertIsDisplayed()
-
-        composeTestRule.onRoot().printToLog("HOME_SCREEN")
+        composeTestRule.onNodeWithText("google", substring = true, ignoreCase = true, useUnmergedTree = true).assertIsDisplayed()
         
-        composeTestRule.onNode(hasScrollToIndexAction()).performScrollToIndex(1)
+        composeTestRule.onNodeWithText("google", substring = true, ignoreCase = true, useUnmergedTree = true).assertIsDisplayed()
+        
+        composeTestRule.onRoot().performTouchInput { swipeUp() }
         
         composeTestRule.waitUntil(timeoutMillis = 5000) {
             try {
-                composeTestRule.onNodeWithText("google-api", substring = true, ignoreCase = true).assertExists()
+                composeTestRule.onNodeWithText("google-research", substring = true, ignoreCase = true, useUnmergedTree = true).assertExists()
                 true
             } catch (e: Exception) {
                 false
             }
         }
-        composeTestRule.onNodeWithText("google-api", substring = true, ignoreCase = true).assertIsDisplayed()
+        composeTestRule.onNodeWithText("google-research", substring = true, ignoreCase = true, useUnmergedTree = true).assertIsDisplayed()
+        
+        composeTestRule.waitUntil(timeoutMillis = 5000) {
+            try {
+                composeTestRule.onNodeWithText("google-api", substring = true, ignoreCase = true, useUnmergedTree = true).assertExists()
+                true
+            } catch (e: Exception) {
+                false
+            }
+        }
+        composeTestRule.onNodeWithText("google-api", substring = true, ignoreCase = true, useUnmergedTree = true).assertIsDisplayed()
     }
 
     @Test

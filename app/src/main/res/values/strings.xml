@@ -5,7 +5,7 @@
     <string name="error_http">HTTPエラー %1$d: %2$s</string>
     <string name="error_network">ネットワークエラーが発生しました。接続を確認してください。</string>
     <string name="error_unknown">不明なエラーが発生しました: %1$s</string>
-    <string name="search_repositories">リポジト</string>
+    <string name="search_repositories">リポジトリを検索...</string>
     <string name="no_matching_users">一致するユーザーがありません</string>
     <string name="enter_keyword_to_search">検索キーワードを入力してください</string>
     <string name="error_unknown_exception">不明なエラー</string>
