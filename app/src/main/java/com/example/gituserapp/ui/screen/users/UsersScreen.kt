@@ -27,6 +27,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.gituserapp.ui.base.BaseScreen
 import com.example.gituserapp.ui.screen.users.components.UserItem
 import com.example.gituserapp.ui.screen.users.components.SearchBar
+import com.gituserapp.R
+
 @Composable
 fun UsersScreen(
     viewModel: UsersViewModel = hiltViewModel()
